@@ -36,7 +36,9 @@ def main(args):
             os.system(f"notify-send 'Screenshot failed'")
             return ret
         else:
-            os.system(f"notify-send 'Screenshot saved to {path}'")
+            os.system(
+                f"notify-send --app-name=screenshot 'Screenshot succeeded' 'Picture is saved to {path}'"
+            )
     return ret
 
 
