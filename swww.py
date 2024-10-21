@@ -62,7 +62,7 @@ def main(parser):
             )
             idx = (idx + 1) % lenth
             time.sleep(args.period)
-        return 0
+
     if args.image:
         return os.system(
             f'{swww_path} img --transition-type {random.choice(transition_type)} --transition-angle {random.randint(0, 359)} --transition-pos {random.choice(transition_pos)} "{args.image}"'
